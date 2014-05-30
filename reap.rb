@@ -10,7 +10,5 @@ harvest = Harvest.hardy_client(subdomain, email, password)
 project = harvest.time.trackable_projects.find { |x| x.name == 'Internal' }
 
 # task is development
-puts "creating entry"
+puts "creating and starting entry"
 created_entry = harvest.time.create Harvest::TimeEntry.new(notes: 'test entry from api', project_id: project.id, task_id: 634112)
-
-puts "starting entry"
